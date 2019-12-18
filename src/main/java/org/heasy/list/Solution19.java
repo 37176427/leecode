@@ -1,4 +1,4 @@
-package org.heasy.practice;
+package org.heasy.list;
 
 import org.heasy.model.ListNode;
 
@@ -27,6 +27,10 @@ public class Solution19 {
         return h.next;
     }
 
+
+    /**
+     * test
+     */
     public static void main(String[] args) {
         ListNode l = new ListNode(1);
         l.next = new ListNode(2);
