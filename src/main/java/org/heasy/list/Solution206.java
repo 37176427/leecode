@@ -2,7 +2,7 @@ package org.heasy.list;
 
 import org.heasy.model.ListNode;
 
-public class Solotion206 {
+public class Solution206 {
 
 
     /**
@@ -64,7 +64,7 @@ public class Solotion206 {
         l.next.next.next = new ListNode(4);
         l.next.next.next.next = new ListNode(5);
 
-        Solotion206 s = new Solotion206();
+        Solution206 s = new Solution206();
         ListNode listNode = s.reverseList2(l);
         System.out.println(listNode);
     }
