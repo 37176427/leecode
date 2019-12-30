@@ -2,8 +2,17 @@ package org.heasy.stack;
 
 import java.util.Stack;
 
-public class MyQueue {
+public class Solution232 {
 
+
+	/**
+	 * 使用栈实现队列的下列操作：
+	 *
+	 * push(x) -- 将一个元素放入队列的尾部。
+	 * pop() -- 从队列首部移除元素。
+	 * peek() -- 返回队列首部的元素。
+	 * empty() -- 返回队列是否为空。
+	 */
 
 	/**
 	 * 使用辅助栈
@@ -14,7 +23,7 @@ public class MyQueue {
 
 
         /** Initialize your data structure here. */
-        public MyQueue() {
+        public Solution232() {
         	stack = new Stack<>();
         	hStack = new Stack<>();
         }
