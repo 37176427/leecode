@@ -60,4 +60,11 @@ public class Solution107 {
 		}
 		return resList;
 	}
+
+	public static void main(String[] args) {
+		int l = 0;
+		int r = 4;
+		System.out.println((l+r)/2);
+		System.out.println(l+(r-1)/2);
+	}
 }
