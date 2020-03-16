@@ -1,4 +1,4 @@
-package org.heasy.BinaryTree;
+package org.heasy.binarytree;
 
 import org.heasy.model.TreeNode;
 
