@@ -45,20 +45,18 @@ public class S15 {
      * 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
      */
     public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> resultList = new ArrayList<>();
         if (nums == null || nums.length < 3){
-            return null;
+            return resultList;
         }
         Arrays.sort(nums);
-        List<List<Integer>> resultList = new ArrayList<>();
         for (int i=0;i<nums.length;i++){
-            // 如果当前数字大于0，则三数之和一定大于0，所以结束循环
             if(nums[i] > 0) {
                 break;
             }
             if(i > 0 && nums[i] == nums[i-1]) {
-                continue; // 去重
+                continue;
             }
-
             int l = i+1;
             int r = nums.length-1;
             while (l<r){
@@ -73,7 +71,6 @@ public class S15 {
                     while (l<r && nums[r]==nums[r-1]) r--;
                     l++;
                     r--;
-
                 }else if (sum > 0){
                     r--;
                 }else {
