@@ -22,18 +22,18 @@ public class Solution2 {
         ListNode l = new ListNode(0);
         ListNode res = l;
         ListNode a = l1, b = l2;
-        int sum, carry=0;
+        int sum, carry = 0;
         while (a != null || b != null) {
-            int aV = a==null? 0:a.val;
-            int bV = b==null? 0:b.val;
+            int aV = a == null ? 0 : a.val;
+            int bV = b == null ? 0 : b.val;
             sum = aV + bV + carry;
             carry = sum / 10;
-            a = a==null? null:a.next;
-            b = b==null? null:b.next;
-            l.next = new ListNode(sum%10);
+            a = a == null ? null : a.next;
+            b = b == null ? null : b.next;
+            l.next = new ListNode(sum % 10);
             l = l.next;
         }
-        if(carry>0) {
+        if (carry > 0) {
             l.next = new ListNode(carry);
         }
         return res.next;
@@ -52,6 +52,6 @@ public class Solution2 {
         l2.next.next = new ListNode(4);
 
         Solution2 s = new Solution2();
-        System.out.println(s.addTwoNumbers(l,l2));
+        System.out.println(s.addTwoNumbers(l, l2));
     }
 }
