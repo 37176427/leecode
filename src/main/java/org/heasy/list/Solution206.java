@@ -15,15 +15,22 @@ public class Solution206 {
      * 迭代 ： 保存下一个节点的引用 反转当前节点next指针
      */
     public ListNode reverseList(ListNode head) {
-        ListNode prev = null;
-        ListNode curr = head;
-        while (curr != null) {
-            ListNode nextTemp = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = nextTemp;
+        ListNode p = null;
+        ListNode c = head;
+        while (c != null){
+            //保存下次要操作的节点
+            ListNode n = c.next;
+            //改变当前节点指针指向反方向
+            c.next = p;
+            //继续操作下一次 赋值对应的节点
+            p = c;
+            c = n;
+
+
         }
-        return prev;
+
+
+        return p;
     }
 
     /**
@@ -68,4 +75,5 @@ public class Solution206 {
         ListNode listNode = s.reverseList2(l);
         System.out.println(listNode);
     }
+
 }
